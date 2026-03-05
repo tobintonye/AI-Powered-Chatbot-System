@@ -5,6 +5,7 @@ django-ratelimit
 django-environ
 djangorestframework_simplejwt
 drf-yasg
+dj-database-url==2.2.0
 
 gunicorn
 whitenoise
