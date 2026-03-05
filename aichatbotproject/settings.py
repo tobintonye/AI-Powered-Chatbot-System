@@ -1,3 +1,4 @@
+import dj_database_url
 import environ
 import os
 
@@ -71,8 +72,16 @@ WSGI_APPLICATION = 'aichatbotproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
+'''
 DATABASES = {
     'default': env.db(),
+}
+'''
+
+DATABASES = {
+    "default": dj_database_url.config(
+        default=os.environ.get("DATABASE_URL")
+    )
 }
 
 # Password validation
